@@ -30,7 +30,6 @@ public class AsyncTaskTest {
             // get response from server
             joke = endpointsAsyncTask.get();
 
-            // Make assertions
             assertNotNull(joke);
             assertTrue(joke.length() > 0);
         } catch (Exception e){
