@@ -9,6 +9,8 @@ import com.udacity.gradle.builditbigger.MainActivity;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import java.io.IOException;
+
 import static junit.framework.TestCase.assertNotNull;
 import static junit.framework.TestCase.assertTrue;
 
@@ -32,8 +34,10 @@ public class AsyncTaskTest {
 
             assertNotNull(joke);
             assertTrue(joke.length() > 0);
-        } catch (Exception e){
+        }
+        catch (Exception e){
             Log.d("AsyncTaskTest", "no response");
+            throw new Exception(e.getMessage());
         }
     }
 }
